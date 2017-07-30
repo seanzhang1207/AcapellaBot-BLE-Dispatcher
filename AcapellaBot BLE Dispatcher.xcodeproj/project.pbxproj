@@ -13,6 +13,7 @@
 		141DF3E11F2E1A2100AC3EAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141DF3DF1F2E1A2100AC3EAD /* Main.storyboard */; };
 		141DF3EC1F2E1A2100AC3EAD /* AcapellaBot_BLE_DispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141DF3EB1F2E1A2100AC3EAD /* AcapellaBot_BLE_DispatcherTests.swift */; };
 		141DF3F71F2E1A2200AC3EAD /* AcapellaBot_BLE_DispatcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141DF3F61F2E1A2200AC3EAD /* AcapellaBot_BLE_DispatcherUITests.swift */; };
+		AC97BAFD8271B60879C984D0 /* Pods_AcapellaBot_BLE_Dispatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A856E17003FBB2A211D662 /* Pods_AcapellaBot_BLE_Dispatcher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09396697D6DC6D5A82D8D8F0 /* Pods-AcapellaBot BLE Dispatcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcapellaBot BLE Dispatcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcapellaBot BLE Dispatcher/Pods-AcapellaBot BLE Dispatcher.debug.xcconfig"; sourceTree = "<group>"; };
 		141DF3D61F2E1A2100AC3EAD /* AcapellaBot BLE Dispatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AcapellaBot BLE Dispatcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		141DF3D91F2E1A2100AC3EAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		141DF3DB1F2E1A2100AC3EAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +47,8 @@
 		141DF3F21F2E1A2200AC3EAD /* AcapellaBot BLE DispatcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AcapellaBot BLE DispatcherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		141DF3F61F2E1A2200AC3EAD /* AcapellaBot_BLE_DispatcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcapellaBot_BLE_DispatcherUITests.swift; sourceTree = "<group>"; };
 		141DF3F81F2E1A2200AC3EAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75A856E17003FBB2A211D662 /* Pods_AcapellaBot_BLE_Dispatcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AcapellaBot_BLE_Dispatcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBB621478A899EE0516B9AD2 /* Pods-AcapellaBot BLE Dispatcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcapellaBot BLE Dispatcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-AcapellaBot BLE Dispatcher/Pods-AcapellaBot BLE Dispatcher.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC97BAFD8271B60879C984D0 /* Pods_AcapellaBot_BLE_Dispatcher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +84,8 @@
 				141DF3EA1F2E1A2100AC3EAD /* AcapellaBot BLE DispatcherTests */,
 				141DF3F51F2E1A2200AC3EAD /* AcapellaBot BLE DispatcherUITests */,
 				141DF3D71F2E1A2100AC3EAD /* Products */,
+				141DF4041F2E31E200AC3EAD /* Frameworks */,
+				EB2EB1578BB089A8244EB4E1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +129,23 @@
 			path = "AcapellaBot BLE DispatcherUITests";
 			sourceTree = "<group>";
 		};
+		141DF4041F2E31E200AC3EAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75A856E17003FBB2A211D662 /* Pods_AcapellaBot_BLE_Dispatcher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB2EB1578BB089A8244EB4E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09396697D6DC6D5A82D8D8F0 /* Pods-AcapellaBot BLE Dispatcher.debug.xcconfig */,
+				FBB621478A899EE0516B9AD2 /* Pods-AcapellaBot BLE Dispatcher.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 141DF3FB1F2E1A2200AC3EAD /* Build configuration list for PBXNativeTarget "AcapellaBot BLE Dispatcher" */;
 			buildPhases = (
+				E9365874440148D9FD9EAE33 /* [CP] Check Pods Manifest.lock */,
 				141DF3D21F2E1A2100AC3EAD /* Sources */,
 				141DF3D31F2E1A2100AC3EAD /* Frameworks */,
 				141DF3D41F2E1A2100AC3EAD /* Resources */,
+				4C933F6F2444C30D34B51E1F /* [CP] Embed Pods Frameworks */,
+				DFA9689C59B682ED12FDBF10 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +279,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C933F6F2444C30D34B51E1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AcapellaBot BLE Dispatcher/Pods-AcapellaBot BLE Dispatcher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFA9689C59B682ED12FDBF10 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AcapellaBot BLE Dispatcher/Pods-AcapellaBot BLE Dispatcher-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9365874440148D9FD9EAE33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		141DF3D21F2E1A2100AC3EAD /* Sources */ = {
@@ -400,10 +475,15 @@
 		};
 		141DF3FC1F2E1A2200AC3EAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09396697D6DC6D5A82D8D8F0 /* Pods-AcapellaBot BLE Dispatcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TF4XG3KZU7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "AcapellaBot BLE Dispatcher/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "seanzhang.AcapellaBot-BLE-Dispatcher";
@@ -414,10 +494,15 @@
 		};
 		141DF3FD1F2E1A2200AC3EAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBB621478A899EE0516B9AD2 /* Pods-AcapellaBot BLE Dispatcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TF4XG3KZU7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "AcapellaBot BLE Dispatcher/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "seanzhang.AcapellaBot-BLE-Dispatcher";
