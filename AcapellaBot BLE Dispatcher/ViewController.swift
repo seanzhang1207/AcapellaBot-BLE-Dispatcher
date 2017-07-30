@@ -27,13 +27,13 @@ class ViewController: NSViewController, NSWindowDelegate, CBCentralManagerDelega
     @IBOutlet weak var bleDeviceList: NSPopUpButton!
     @IBOutlet weak var ipTextField: NSTextField!
     @IBOutlet weak var portTextField: NSTextField!
-    @IBOutlet weak var destinationsLabel: NSTextField!
     @IBOutlet weak var connectButton: NSButton!
+    @IBOutlet weak var destinationTableView: NSTableView!
     
     var peripherals = [String: CBPeripheral]()
     
-    var addrs = [String]()
-    var ports = [Int]()
+    var addrs = ["192.168.3.100"]
+    var ports = [12345]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,9 @@ class ViewController: NSViewController, NSWindowDelegate, CBCentralManagerDelega
         statusLabel.stringValue = "Scanning for devices..."
         udpClient = GCDAsyncUdpSocket()
         udpClient.setDelegate(self)
+        
+        destinationTableView.delegate = self
+        destinationTableView.dataSource = self
     }
     
     override func viewDidAppear() {
@@ -79,12 +82,7 @@ class ViewController: NSViewController, NSWindowDelegate, CBCentralManagerDelega
             ports.append(Int.init(portTextField.stringValue)!)
         }
         
-        var str = ""
-        for index in 0...addrs.count - 1 {
-            print(index)
-            str += addrs[index] + ":" + String(ports[index]) + "\n"
-        }
-        destinationsLabel.stringValue = str
+        destinationTableView.reloadData()
         
     }
     
@@ -111,8 +109,6 @@ class ViewController: NSViewController, NSWindowDelegate, CBCentralManagerDelega
             peripherals[device! as String] = peripheral
         }
         
-        
-        /*
         if device?.contains(BEAN_NAME) == true {
             self.manager.stopScan()
             self.peripheral = peripheral
@@ -120,7 +116,7 @@ class ViewController: NSViewController, NSWindowDelegate, CBCentralManagerDelega
             manager.connect(peripheral, options: nil)
             print("connect")
         }
-        */
+        
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
@@ -166,4 +162,47 @@ class ViewController: NSViewController, NSWindowDelegate, CBCentralManagerDelega
             }
         }
     }
+}
+
+extension ViewController: NSTableViewDataSource {
+    
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return addrs.count
+    }
+    
+}
+
+extension ViewController: NSTableViewDelegate {
+    
+    fileprivate enum CellIdentifiers {
+        static let AddressCell = "AddressCellID"
+        static let PortCell = "PortCellID"
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        
+        var image: NSImage?
+        var text: String = ""
+        var cellIdentifier: String = ""
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .long
+        
+        
+        if tableColumn == tableView.tableColumns[0] {
+            text = addrs[row]
+            cellIdentifier = CellIdentifiers.AddressCell
+        } else if tableColumn == tableView.tableColumns[1] {
+            text = String(ports[row])
+            cellIdentifier = CellIdentifiers.PortCell
+        }
+        
+        if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
+            cell.textField?.stringValue = text
+            return cell
+        }
+        return nil
+    }
+    
 }
